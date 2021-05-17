@@ -2,10 +2,10 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  selector: 'app-agile-automation',
+  templateUrl: './agile-automation.component.html'
 })
-export class FetchDataComponent {
+export class AgileAutomationComponent {
   public forecasts: WeatherForecast[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
