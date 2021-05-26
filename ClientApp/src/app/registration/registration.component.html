@@ -1,0 +1,36 @@
+<h2 style="padding-top: initial;">Please register below:</h2>
+<form #productForm="ngForm">
+  <div class="form-group col-md-6">
+    <label>First Name</label>
+    <input name="firstName" [(ngModel)]="productService.formData.ProductID" class="form-control" required>
+  </div>
+  <div class="form-group col-md-6">
+    <label>Last Name</label>
+    <input name="lastName" [(ngModel)]="productService.formData.Product1" class="form-control">
+  </div>
+  <div class="form-group col-md-6">
+    <label>Email</label>
+    <input name="email" [(ngModel)]="productService.formData.QA_URL" class="form-control">
+  </div>
+  <div class="form-group col-md-6">
+    <label>Phone Number </label>
+    <input name="phoneNumber" [(ngModel)]="productService.formData.ProdDescription " class="form-control">
+  </div>
+  <div class="form-group col-md-6">
+    <label>Comments </label>
+    <input name="Comments" [(ngModel)]="productService.formData.Notes" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <button id="Register" type="submit" class="btn btn-lg btn-block btn-info" (click)="onSubmit(productForm)">
+        <i class="fa fa-floppy-o"></i> Register
+      </button>
+    </div>
+    <div class="form-group col-md-2">
+      <button id="cancel" type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(productForm)">
+        <i class="fa fa-repeat"></i> Cancel
+      </button>
+    </div>
+  </div>
+</form>
