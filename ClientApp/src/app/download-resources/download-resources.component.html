@@ -1,1 +1,92 @@
-<p>download-resources works!</p>
+<article class="qa-session">
+  <!-- Question 1 -->
+  <section class="qa-pair">
+    <h1>1. What are your strengths and weaknesses?</h1>
+    <p><strong>Strengths:</strong></p>
+    <ul>
+      <li>
+        <strong>Proactive (Shift-Left Mentality):</strong> I am actively involved in product feature grooming and refinement from the very beginning. By providing early feedback, analyzing edge cases, considering the user experience/flow, and raising critical questions during Acceptance Criteria (AC) reviews, I help prevent bugs before development even starts.
+      </li>
+      <li>
+        <strong>Forward-Thinking Automation:</strong> I focus on building highly reusable and scalable automation frameworks. This includes isolating test data from test scripts, avoiding hardcoding, and strictly following SOLID principles to ensure the framework remains robust and maintainable.
+      </li>
+      <li>
+        <strong>Collaborative Team Player:</strong> I am highly effective at triaging issues and collaborating directly with Product Owners (POs) and developers to resolve ambiguities and clarify requirements.
+      </li>
+    </ul>
+    <p>
+      <strong>Weakness:</strong> Because I am highly proactive, I sometimes try to pack too much automation into a single story within a sprint while working closely on it. However, I recognize that this is not an iterative approach aligned with Agile methodologies. Instead of risking scope creep, I am continuously working to ensure my time is dedicated to the highest-priority tasks, such as monitoring automated runs and troubleshooting failures.
+    </p>
+  </section>
+
+  <!-- Question 2 -->
+  <section class="qa-pair">
+    <h1>2. What is your biggest achievement and accomplishment?</h1>
+    <p>
+      One major achievement involved an AI-driven medication summary feature we were delivering to clients, which was highly inconsistent and unreliable. I triaged the issue and brought together developers, POs, and PMs to discuss the risks and the impact on user experience. Based on this, we successfully reduced the AI's scope: we pivoted to using a deterministic API to pull raw database data, and restricted the non-deterministic AI to handling layout and formatting. This preserved a seamless user experience while ensuring critical healthcare data remained fully compliant.
+    </p>
+    <p>
+      Additionally, when my team took over a historically unstable test suite, I led the effort to stabilize it. By eliminating poor wait strategies and fragile locators, utilizing database seeds and API calls for initial test setups, optimizing test data, and standardizing our debugging workflows, we successfully reduced flakiness-induced test failures by 75%. 
+    </p>
+    <p>
+      We then implemented a rotation system for automation suite monitoring and feature ownership across different scrum teams. This rotation not only upskilled the developers on test maintenance but completely restored the organization's trust in our CI/CD pipeline.
+    </p>
+  </section>
+
+  <!-- Question 3 -->
+  <section class="qa-pair">
+    <h1>3. Tell me about a time you had a disagreement with a developer regarding a bug’s severity.</h1>
+    <p>
+      Like with any disagreement, open and transparent communication is key. I approach these situations by relying on data and user impact. By clearly mapping out the user persona, the frequency of the workflow, and the potential business risk, I align with the developer on a severity level that accurately reflects the real-world impact.
+    </p>
+  </section>
+
+  <!-- Question 4 -->
+  <section class="qa-pair">
+    <h1>4. Describe a situation where you had to work closely with a cross-functional team to solve a major quality problem.</h1>
+    <p>
+      We noticed an upward trend in production defects, which indicated a gap in early-stage testing. To address this, I collaborated closely with the development team and engineering leadership to mandate unit tests as a formal part of the Definition of Done (DoD). Furthermore, we integrated a lightweight, targeted set of unit smoke tests directly into the CI build pipeline to catch regressions immediately upon code submission.
+    </p>
+  </section>
+
+  <!-- Question 5 -->
+  <section class="qa-pair">
+    <h1>5. Tell me about a complex or difficult bug you found and how you investigated it.</h1>
+    <p>
+      During an execution cycle, I uncovered a critical race condition that caused intermittent data corruption during concurrent user sessions. To investigate, I analyzed server-side application logs, monitored real-time database transactions, and isolated the specific network payloads. By reconstructing the exact sequence of asynchronous API calls, I pinpointed the missing synchronization logic and worked with the development team to deploy a permanent fix.
+    </p>
+  </section>
+
+  <!-- Question 6 -->
+  <section class="qa-pair">
+    <h1>6. Tell me about a time you introduced a new tool or process that changed how the team operated.</h1>
+    <p>
+      As part of our Definition of Done, we were writing automated tests, but we weren't consistently executing them or staying on top of nightly runs. To solve this, I introduced a dedicated automation review process. Under this process, we review the automated tests and verify their stability before code check-in, ensuring they are properly integrated into the nightly execution cycles to catch breaking changes early.
+    </p>
+    <p>
+      On the tooling side, I created an AI-powered triage agent. By feeding it a specific Run ID and Result ID, the agent automatically triages the failure log. This significantly streamlined the debugging workflow, making it much easier for less technical QA team members and developers alike to quickly identify root causes.
+    </p>
+  </section>
+
+  <!-- Question 7 -->
+  <section class="qa-pair">
+    <h1>7. Tell me about a time you had to advocate for QA resources or timeline extensions to leadership.</h1>
+    <p>
+      During a major feature rewrite project, development was moving exceptionally fast because the business logic was already established, making it a matter of reimplementing it in a newer tech stack. However, for QA, the workload doubled: we had to thoroughly test the new architecture, validate it against legacy systems, and completely rebuild and automate our regression suites. This created a severe bottleneck.
+    </p>
+    <p>
+      Instead of just asking for a deadline extension, I proposed a risk-mitigation strategy using our feature flagging system. I worked with Product Management to identify a group of opt-in "Beta" organizations. We deployed the update to production but gated the new architecture behind a feature flag, enabling it only for those specific beta clients. This restricted our blast radius and gave the QA team an extra two weeks to finish comprehensive regression and performance testing on the staging environment before a global rollup.
+    </p>
+    <p>
+      Leadership highly appreciated the compromise. The beta phase allowed us to monitor live server metrics and catch a high-volume database lock issue affecting only large-scale tenants. We resolved it quietly before flipping the feature flag to "on" for the rest of our global SaaS customers, resulting in a zero-downtime release.
+    </p>
+  </section>
+
+  <!-- Question 8 -->
+  <section class="qa-pair">
+    <h1>8. How do you keep yourself and your testing strategies up to date with evolving industry trends?</h1>
+    <p>
+      I continuously follow industry updates by taking structured courses and watching technical deep-dives on platforms like Udemy and YouTube. Additionally, while it might sound unconventional, I regularly track technical job postings. Reviewing the skills and toolsets leading companies are actively hiring for gives me an excellent, real-world understanding of where the industry is moving and ensures my skills remain highly relevant.
+    </p>
+  </section>
+</article>
