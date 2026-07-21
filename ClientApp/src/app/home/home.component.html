@@ -10,54 +10,53 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --dark-bg: #0f172a;
-            --header-bg: #020617;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8fafc;
-            color: #334155;
+            background-color: #f8fafc !important;
+            color: #1e293b !important;
         }
 
-        /* --- Top Header Info Section --- */
+        /* --- Header Section --- */
         .top-info-header {
-            background-color: var(--header-bg);
-            color: #ffffff;
-            padding: 35px 20px 25px 20px;
-            border-bottom: 1px solid #1e293b;
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            padding: 40px 20px 30px 20px;
+            border-bottom: 2px solid #334155;
+        }
+
+        .header-title {
+            color: #ffffff !important;
+            font-weight: 800;
+        }
+
+        .role-tagline {
+            color: #38bdf8 !important;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
         .contact-pill {
             display: inline-block;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 6px 14px;
+            background-color: #1e293b !important;
+            color: #f8fafc !important;
+            padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
             margin: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .role-tagline {
-            color: var(--accent-color);
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            border: 1px solid #475569;
         }
 
         /* --- Hero Carousel Styles --- */
         .hero-section {
-            background-color: var(--dark-bg);
-            color: #ffffff;
+            background-color: #1e293b !important;
+            color: #ffffff !important;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 3px solid #0284c7;
         }
 
         .carousel-item {
-            min-height: 420px;
+            min-height: 380px;
             padding: 40px 20px 60px 20px;
         }
 
@@ -68,34 +67,45 @@
 
         .slide-badge {
             display: inline-block;
-            background-color: rgba(56, 189, 248, 0.15);
-            color: var(--accent-color);
-            padding: 6px 16px;
+            background-color: #0284c7 !important;
+            color: #ffffff !important;
+            padding: 6px 18px;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .slide-text-main {
+            color: #f8fafc !important;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .slide-text-sub {
+            color: #94a3b8 !important;
+            font-size: 0.95rem;
         }
 
         .tech-pill {
             display: inline-block;
-            background-color: #334155;
-            color: #f1f5f9;
+            background-color: #0f172a !important;
+            color: #38bdf8 !important;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
+            font-weight: 600;
             margin: 4px;
-            border: 1px solid #475569;
+            border: 1px solid #334155;
         }
 
         .project-card-mini {
-            background-color: var(--card-bg);
+            background-color: #0f172a !important;
             border: 1px solid #334155;
             border-radius: 8px;
-            padding: 18px;
+            padding: 20px;
             height: 100%;
             text-align: left;
         }
@@ -105,14 +115,14 @@
             height: 12px;
             border-radius: 50%;
             margin: 0 6px;
-            background-color: var(--accent-color);
+            background-color: #38bdf8 !important;
         }
 
-        /* --- Main Content Section Styling --- */
+        /* --- Section Styling --- */
         .section-title {
             position: relative;
             font-weight: 700;
-            color: #0f172a;
+            color: #0f172a !important;
             margin-bottom: 2rem;
             padding-bottom: 0.5rem;
         }
@@ -124,39 +134,34 @@
             bottom: 0;
             height: 4px;
             width: 60px;
-            background-color: var(--primary-color);
+            background-color: #0284c7;
             border-radius: 2px;
         }
 
         .experience-card {
-            border-left: 4px solid var(--primary-color);
-            background: #ffffff;
+            border-left: 4px solid #0284c7;
+            background: #ffffff !important;
             border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-            transition: transform 0.2s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-2px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .skill-category {
-            background-color: #ffffff;
+            background-color: #ffffff !important;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             padding: 20px;
             height: 100%;
         }
 
         .skill-tag {
-            background-color: #e2e8f0;
-            color: #334155;
-            padding: 4px 10px;
+            background-color: #e2e8f0 !important;
+            color: #0f172a !important;
+            padding: 5px 12px;
             border-radius: 4px;
             font-size: 0.85rem;
             display: inline-block;
             margin: 3px;
-            font-weight: 500;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -180,10 +185,10 @@
         </div>
     </nav>
 
-    <!-- TOP INFORMATION HEADER (Placed directly above the carousel) -->
+    <!-- TOP INFORMATION HEADER -->
     <header class="top-info-header text-center">
         <div class="container">
-            <h1 class="display-5 fw-bold text-white mb-2">SUJAN GHIMIRE</h1>
+            <h1 class="display-5 header-title mb-2">SUJAN GHIMIRE</h1>
             <p class="role-tagline mb-3">
                 Lead Quality Engineer | SDET | Automation Framework Architecture | UI Automation | API Testing | Performance Testing | AI-Driven Testing
             </p>
@@ -191,7 +196,7 @@
                 <span class="contact-pill"><i class="fa-solid fa-location-dot text-info me-2"></i>Frederick, MD</span>
                 <span class="contact-pill"><i class="fa-solid fa-phone text-info me-2"></i>502-224-4860</span>
                 <span class="contact-pill"><i class="fa-solid fa-envelope text-info me-2"></i>ghimiresujan@gmail.com</span>
-                <span class="contact-pill"><i class="fa-solid fa-passport text-info me-2"></i>Work Authorization: U.S. Citizen</span>
+                <span class="contact-pill"><i class="fa-solid fa-shield-halved text-info me-2"></i>Work Authorization: U.S. Citizen</span>
             </div>
         </div>
     </header>
@@ -212,11 +217,11 @@
                 <div class="carousel-item active">
                     <div class="container text-center carousel-caption-custom">
                         <span class="slide-badge"><i class="fa-solid fa-user-check me-2"></i>Executive Summary</span>
-                        <p class="text-light lead fs-6">
+                        <p class="slide-text-main fw-normal">
                             Lead Quality Engineer / SDET with 15+ years of experience designing, developing, and scaling automation frameworks across healthcare, life sciences, aviation, e-commerce, manufacturing, and enterprise technology environments.
                         </p>
-                        <p class="text-light-50 small d-none d-md-block">
-                            Expertise in UI & API automation, performance testing, CI/CD pipelines, and building maintainable frameworks from scratch using Page Object Model, SOLID principles, BDD, TDD, and AI-assisted workflows (GitHub Copilot).
+                        <p class="slide-text-sub mt-3 d-none d-md-block">
+                            Expertise in UI & API automation, performance testing, CI/CD pipelines, and building maintainable frameworks from scratch using Page Object Model, SOLID principles, BDD, TDD, and AI-assisted workflows.
                         </p>
                     </div>
                 </div>
@@ -482,7 +487,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 Bundle JS (Includes Popper) -->
+    <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
